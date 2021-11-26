@@ -19,7 +19,8 @@ App, Home, Error404, StatusBar, Question, Answer, Result
 
 - Functionalities :
 
-- Home redirects to Quiz
+- Home redirects to Quiz, useHistory, or with routes,
+
 - enable checkbox, submit event, show answer re-render with the updated value ,
 - Next button : event incrementing variable from source
 -

@@ -14,6 +14,7 @@ function Button(props) {
     <>
       <button type={type} className={classes}>
         {children}
+        <i class="fas fa-arrow-right arrow"></i>
       </button>
     </>
   );
