@@ -4,6 +4,7 @@
 
 - Create a quiz with React.
 - You should use the file **questions.js** with questions and answers for the quiz and import it in the corresponding file.
+
 - Once the user marks the answer and clicks submit, they should be able to see the correct answer highlighted in green and the wrong answer highlighted in red.
 - The user will click next question until the end of the quiz, if the user does not click any answer remind them to select one.
 - Update the score after every answer.

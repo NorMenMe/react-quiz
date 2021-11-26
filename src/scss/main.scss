@@ -1,1 +1,14 @@
 @import "~bootstrap/scss/bootstrap";
+
+.ui-btn {
+  background-color: #1266f1;
+  color: white;
+  border: none;
+  padding: 1%;
+  font-size: 14px;
+  border-radius: 4px;
+
+  .arrow {
+    margin-left: 0.3rem;
+  }
+}
