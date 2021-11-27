@@ -35,4 +35,5 @@ UI kit :
 
 next :
 
-- write functionalities
+- home comp: redirection Link nesting button , Switch route
+  - or via useHistory / use location / Redirect
