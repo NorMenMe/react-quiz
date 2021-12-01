@@ -1,5 +1,6 @@
 import React from "react";
 import { Header, Button } from "../helpers/importer.js";
+import { Link, Navigate } from "react-router-dom";
 
 function Home() {
   return (
@@ -13,7 +14,9 @@ function Home() {
         <br />
         Find out if you know all the details!
       </p>
-      <Button>Let's have fun!</Button>
+      <Link to="/quiz">
+        <Button>Let's have fun!</Button>
+      </Link>
     </>
   );
 }

@@ -27,13 +27,6 @@ App, Home, Error404, StatusBar, Question, Answer, Result
 
 ## start
 
-UI kit :
-
-- build Button
-
-//-----------------------
-
 next :
 
-- home comp: redirection Link nesting button , Switch route
-  - or via useHistory / use location / Redirect
+- issue: related to react router v6, sea url match wont render component
