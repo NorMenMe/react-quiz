@@ -1,11 +1,12 @@
 import React from "react";
-import { Header, Status } from "../helpers/importer.js";
+import { Header, Status, Question } from "../helpers/importer.js";
 
 function Quiz() {
   return (
     <>
       <Header />
       <Status />
+      <Question />
     </>
   );
 }

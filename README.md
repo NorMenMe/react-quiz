@@ -29,4 +29,4 @@ App, Home, Error404, StatusBar, Question, Answer, Result
 
 next :
 
-- issue: related to react router v6, sea url match wont render component
+- issue: build Status
