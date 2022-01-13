@@ -1,5 +1,7 @@
 @import "~bootstrap/scss/bootstrap";
+@import "./components/status.scss";
 
+// ui kit => reusable components
 .ui-btn {
   background-color: #1266f1;
   color: white;

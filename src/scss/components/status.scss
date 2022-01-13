@@ -1,0 +1,7 @@
+@import "../abstracts/mixins";
+
+.status {
+  width: 100%;
+  @include between;
+  padding: 2%;
+}

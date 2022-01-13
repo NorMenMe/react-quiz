@@ -27,12 +27,6 @@ App, Home, Error404, StatusBar, Question, Answer, Result
 
 ## start
 
-UI kit :
-
-- build Button
-
-//-----------------------
-
 next :
 
-- write functionalities
+- issue: build Status
