@@ -1,6 +1,6 @@
 import React from "react";
 import { Header, Button } from "../helpers/importer.js";
-import { Link, Navigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 function Home() {
   return (
