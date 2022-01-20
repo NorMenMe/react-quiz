@@ -25,8 +25,19 @@ App, Home, Error404, StatusBar, Question, Answer, Result
 
 - "next" button : event incrementing variable from source
 
+## data model
+
+- Question > Status : if state score has to increase . If the state question onClick of Next btn increases
+
 ## start
 
 next :
 
-- issue: build Status
+- state "counter" is needed :
+
+  -Status
+  -Question
+  => you need useContext,
+  create Global State Component ? Do I need it ?or just a provider?
+
+- pass down the counter state

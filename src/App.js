@@ -1,6 +1,6 @@
 import "./scss/main.scss";
 import { Home, Quiz } from "../src/helpers/importer.js";
-import { Link, Routes, Switch, Route } from "react-router-dom";
+import { Switch, Route } from "react-router-dom";
 
 function App() {
   return (
