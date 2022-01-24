@@ -31,7 +31,9 @@ App, Home, Error404, StatusBar, Question, Answer, Result
 
 ## start
 
-next :
+next : 
+
+- set new branch
 
 - state "counter" is needed :
 
@@ -40,16 +42,4 @@ next :
   => you need useContext,
   create Global State Component ? Do I need it ?or just a provider?
 
-context :
-
-- new file,import the createContext
-  -store it in a Comp
-  -export default Component
-
--import component, chain Provider
-, add attribute value = {{}}
--declare the state on top level
-
-in retrieving component\_
-import context compoent, call hook passing the compoenent,
-now you can destructure
+import useContext hook & Context component , for calling the hook passing the component, then destructuring the state variables
