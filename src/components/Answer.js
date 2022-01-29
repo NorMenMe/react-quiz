@@ -11,7 +11,13 @@ for (let key in data) {
 
 function Answer({ counter }) {
   const mapped = input[counter].map((answer) => {
-    return <li className="answer__item">{answer.text}</li>;
+    return <li class="answer__item">
+            <div class="answer__checkbox">
+              <label for='checkbox'></label>
+              <input type='checkbox' id='checkbox'/>
+            </div>
+            <p class="answer__text">{answer.text}</p>
+          </li>;
   });
 
   return (

@@ -35,3 +35,10 @@ next :
 
 - set new branch
 
+- from the mockup : 
+  - a list of answer, each a checkbox
+  - a button submit which triggers : 
+    - right answer green border , all wrong ones have a red border
+    - display nex button
+    - update the Score component
+  
