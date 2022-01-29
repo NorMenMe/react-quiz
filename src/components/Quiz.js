@@ -4,7 +4,7 @@ import { Header, Status, Question } from "../helpers/importer.js";
 import QuizContext from "./CreateContext.js";
 
 function Quiz() {
-  const [counter, setCounter] = useState(0);
+const [counter,setCounter]=useState(1)
 
   return (
     <>
