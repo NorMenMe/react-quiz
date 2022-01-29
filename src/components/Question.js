@@ -1,9 +1,9 @@
-import React, { useState, useEffect,useContext } from "react";
+import React, {useContext } from "react";
 import data from "../data.js";
 import { Button, Answer } from "../helpers/importer";
 import QuizContext from './CreateContext'
 
-// storing my input
+// storing the input
 let arrQuestions = [];
 
 for (let obj in data) {
@@ -12,16 +12,11 @@ for (let obj in data) {
 //----------------------------------------
 
 function Question() {
-  // const [counter, setCounter] = useState(0);
 const {counter, setCounter}=useContext(QuizContext)
-
-console.log(counter);
 
   const incrementCounter = () => {
     setCounter(counter + 1);
   };
-
-  // useEffect(() => {}, [counter]);
 
   return (
     <section className="question">

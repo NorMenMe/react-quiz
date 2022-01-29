@@ -35,11 +35,3 @@ next :
 
 - set new branch
 
-- state "counter" is needed :
-
-  -Status
-  -Question
-  => you need useContext,
-  create Global State Component ? Do I need it ?or just a provider?
-
-import useContext hook & Context component , for calling the hook passing the component, then destructuring the state variables
