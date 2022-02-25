@@ -54,23 +54,19 @@ next :
 -answers array
 -solutions array
 
-    task : start showing 1 solution array
-          -wanna say on nodelist item at this index turn it green
-          -helps me the index parameter of the forEach?
-          -inside the iteration can I access index positioned items ?
-          -conditional:
-                      the index.positon number of the solution is the number of the index of the nodelist where the css change
-          - if index the index of the current item matches the solution index number , turn it green otherwise red
-
-- //// move on from here
--     - hardcode it first, then dynamic with the solution array; can I avoid a nested iteration?
-        -other line of cssText
+    - hardcode it first, then dynamic with the solution array; can I avoid a nested iteration?
+    - achieve:
+        - default value of the state becomes dynamic according to the state "question" that get increased
 
 - NEXT:
-  for the output what do you need ?
-  -the index number of the solution
 
-      -if the item has the same index of the right answer then border color green
+  -should I mutate the solutions input as an array of objects ?
+  -achieve : one solutions item (an array of numbers) scope all three lis for each solution
+
+  for the output what do you need ?
+  -the value inside each solution array
+
+      -if the item'index has the same number of the right answer then border color green
 
   -so check the value of the checkbox
 
