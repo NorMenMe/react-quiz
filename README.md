@@ -54,26 +54,22 @@ next :
 -answers array
 -solutions array
 
-    - hardcode it first, then dynamic with the solution array; can I avoid a nested iteration?
-    - achieve:
-        - default value of the state becomes dynamic according to the state "question" that get increased
-
-- NEXT:
-
-  -should I mutate the solutions input as an array of objects ?
-  -achieve : one solutions item (an array of numbers) scope all three lis for each solution
-
-  for the output what do you need ?
-  -the value inside each solution array
-
-      -if the item'index has the same number of the right answer then border color green
-
-  -so check the value of the checkbox
-
-  - checked &
-
 -todos :
 
 - display next button when answer is shown
 - update the Score component
   -extras : put the input in the context, refactoring
+
+task: display the "next" button when the answer is shown
+steps:
+on submit run a function, this function: - runs getAnswer() - compare the checked box with solution - update the score - show next button
+
+next: compare the checked box with solution
+-select all checkboxes
+-iterate, check each box, if the prop is true:
+-return the index
+// from here
+
+                              - if box index matches with the solution => increase the score state
+
+    -compare the checkbox index with the solution, if === then increase the state of the score

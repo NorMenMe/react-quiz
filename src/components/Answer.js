@@ -18,16 +18,26 @@ const [solution,setSolution]  = useState(solutions[0][0])
 
 const getAnswer = (e) => {
   e.preventDefault();
-  const items = document.querySelectorAll('.answer__item')
+  let items = document.querySelectorAll('.answer__item')
   items.forEach((item,index) => {
     
       if(index === solution) {
+        console.log(solution);
         item.style.cssText = "border : 2px solid green;"
       } else {
         item.style.cssText = "border : 2px solid red;"
       }
 
     })
+
+    let checkboxes = document.querySelectorAll("#checkbox");
+    checkboxes.forEach((checkbox,index) => {
+      if (checkbox.checked) {
+        console.log(index);
+      }
+    })
+
+
   }
   
   const mapped = input[counter].map((answer) => {
