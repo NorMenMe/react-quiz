@@ -1,6 +1,7 @@
 import React, { useState, useContext } from "react";
 import QuizContext from "./CreateContext";
 
+
 function Status() {
   const {counter, setCounter} = useContext(QuizContext);
   const [score, setScore] = useState(0);
