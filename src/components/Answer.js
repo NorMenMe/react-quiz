@@ -34,6 +34,7 @@ const getAnswer = (e) => {
     checkboxes.forEach((checkbox,index) => {
       if (checkbox.checked) {
         console.log(index);
+        console.log(solution);
       }
     })
 
