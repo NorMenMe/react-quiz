@@ -5,5 +5,7 @@ import Home from "../components/Home.js";
 import Status from "../components/Status.js";
 import Question from "../components/Question.js";
 import Answer from "../components/Answer.js";
+import QuizContext from "../components/CreateContext";
 
-export { Header, Button, Quiz, Home, Status, Question, Answer };
+
+export { Header, Button, Quiz, Home, Status, Question, Answer,QuizContext };

@@ -1,5 +1,6 @@
 @import "~bootstrap/scss/bootstrap";
 @import "./components/status.scss";
+@import "./components/answer.scss";
 
 // ui kit => reusable components
 .ui-btn {
@@ -15,3 +16,5 @@
     margin-left: 0.3rem;
   }
 }
+
+

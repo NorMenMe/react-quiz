@@ -31,15 +31,46 @@ App, Home, Error404, StatusBar, Question, Answer, Result
 
 ## start
 
-next : 
+next :
 
 - set new branch
 
-- state "counter" is needed :
+- from the mockup :
 
-  -Status
-  -Question
-  => you need useContext,
-  create Global State Component ? Do I need it ?or just a provider?
+  - a button submit which triggers :
+    - right answer green border , all wrong ones have a red border
 
-import useContext hook & Context component , for calling the hook passing the component, then destructuring the state variables
+  -button submit :
+  -on click :show the right answer, achieve to show border for each "answer item"
+  -display the right answer with a different color
+
+  -check the input, an array input[ counter ]? do I have a index of right answer ?
+
+  solution is an array of numbers,mulitple right answers;the number is referring to the index of the answers,array
+
+//
+
+2 inputs:
+-answers array
+-solutions array
+
+-todos :
+
+- display next button when answer is shown
+- update the Score component
+  -extras : put the input in the context, refactoring
+
+task: display the "next" button when the answer is shown
+steps:
+on submit run a function, this function: - runs getAnswer() - compare the checked box with solution - update the score - show next button
+
+next: compare the checked box with solution
+
+
+  - if box index matches with the solution => increase the score state
+            - need to have context of setState function of score
+                - need to build useContext hook because Status &  Question are on the same nesting-level
+            - comparison index to solution, if true, run setScore
+            - how do I get context of setScore ? possible with props instead of useContext ?
+
+    -compare the checkbox index with the solution, if === then increase the state of the score
