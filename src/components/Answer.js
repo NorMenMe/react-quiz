@@ -1,6 +1,6 @@
-import React,{useState} from "react";
+import React,{useState,useContext} from "react";
 import data from "../data.js";
-import { Button } from "../helpers/importer";
+import { Button,QuizContext } from "../helpers/importer";
 
 // input
 let input = [];
@@ -14,31 +14,28 @@ for (let key in data) {
 
 function Answer({ counter }) {
  
-const [solution,setSolution]  = useState(solutions[0][0])
+const [solution,setSolution]  = useState(solutions[0][0]);
+const {score,setScore} = useContext(QuizContext);
 
 const getAnswer = (e) => {
   e.preventDefault();
   let items = document.querySelectorAll('.answer__item')
   items.forEach((item,index) => {
-    
       if(index === solution) {
-        console.log(solution);
         item.style.cssText = "border : 2px solid green;"
       } else {
         item.style.cssText = "border : 2px solid red;"
       }
-
     })
 
     let checkboxes = document.querySelectorAll("#checkbox");
     checkboxes.forEach((checkbox,index) => {
       if (checkbox.checked) {
-        console.log(index);
-        console.log(solution);
+        if (index === solution) {
+          setScore(score + 1);
+        }
       }
     })
-
-
   }
   
   const mapped = input[counter].map((answer) => {

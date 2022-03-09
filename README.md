@@ -64,13 +64,8 @@ task: display the "next" button when the answer is shown
 steps:
 on submit run a function, this function: - runs getAnswer() - compare the checked box with solution - update the score - show next button
 
-next: compare the checked box with solution
+next: 
 
-
-  - if box index matches with the solution => increase the score state
-            - need to have context of setState function of score
-                - need to build useContext hook because Status &  Question are on the same nesting-level
-            - comparison index to solution, if true, run setScore
-            - how do I get context of setScore ? possible with props instead of useContext ?
-
-    -compare the checkbox index with the solution, if === then increase the state of the score
+            - pass score state as prop to Status
+            - check that the score it updates in the Status component
+            - enable the Next button
