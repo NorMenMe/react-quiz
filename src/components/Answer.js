@@ -33,6 +33,7 @@ const getAnswer = (e) => {
       if (checkbox.checked) {
         if (index === solution) {
           setScore(score + 1);
+          console.log(score);
         }
       }
     })

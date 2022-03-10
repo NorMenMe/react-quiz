@@ -54,6 +54,7 @@ next :
 -answers array
 -solutions array
 
+
 -todos :
 
 - display next button when answer is shown
@@ -64,8 +65,16 @@ task: display the "next" button when the answer is shown
 steps:
 on submit run a function, this function: - runs getAnswer() - compare the checked box with solution - update the score - show next button
 
-next: 
+compare the checked box with solution
 
-            - pass score state as prop to Status
-            - check that the score it updates in the Status component
-            - enable the Next button
+
+  - if box index matches with the solution => increase the score state
+            - need to have context of setState function of score
+                - need to build useContext hook because Status &  Question are on the same nesting-level
+            - comparison index to solution, if true, run setScore
+    -compare the checkbox index with the solution, if === then increase the state of the score
+    
+    next: 
+            - enable the Next button, his function:
+                - increase the state counter in order to re-render & display the next question
+                - does it works without useEffect ?

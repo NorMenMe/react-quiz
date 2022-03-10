@@ -10,7 +10,7 @@ const [score,setScore]= useState(0);
     <>
       <QuizContext.Provider value={{ counter, setCounter,score,setScore }}>
         <Header />
-        <Status />
+        <Status score={score}/>
         <Question />
       </QuizContext.Provider>
     </>
