@@ -75,8 +75,6 @@ compare the checked box with solution
     -compare the checkbox index with the solution, if === then increase the state of the score
     
     next: 
-            - on event of button submit,enable the Next button, 
-            - his function:
-                - increase the state counter in order to re-render & display the next question
-                - does it works without useEffect ?
-                - increment setCounter 
+            - on event of button submit,enable the Next button
+              - change his css; his css by default is display none; 
+              - sea : how to enable disable buttons
