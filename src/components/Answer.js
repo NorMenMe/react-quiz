@@ -52,7 +52,7 @@ const getAnswer = (e) => {
   return (
     <section>
       <ul className="answer__list">{mapped}</ul>
-      <Button onClick={(e) => getAnswer(e) }>Submit</Button>
+      <Button onClick={(e) => getAnswer(e)}>Submit</Button>
     </section>
   );
 }

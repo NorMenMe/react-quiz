@@ -15,9 +15,9 @@ const {counter, setCounter}=useContext(QuizContext)
 
   return (
     <section className="question">
-      <p className="question__txt">{arrQuestions[counter]}</p>
+      <p className="question__text">{arrQuestions[counter]}</p>
       <Answer counter={counter} />
-      {/* <Button onClick={() => incrementCounter()}>Next</Button> */}
+      <Button onClick={() => setCounter(counter + 1)} type={"button"} >Next</Button>
     </section>
   );
 }
