@@ -12,10 +12,11 @@ for (let key in data) {
 }
 // -----------------------------------
 
-function Answer({ counter }) {
+function Answer({ counter,setCounter }) {
  
 const [solution,setSolution]  = useState(solutions[0][0]);
 const {score,setScore} = useContext(QuizContext);
+let [isSubmit,setIsSubmit] = useState(false);
 
 const getAnswer = (e) => {
   e.preventDefault();
@@ -37,6 +38,8 @@ const getAnswer = (e) => {
         }
       }
     })
+
+    setIsSubmit(true);
   }
   
   const mapped = input[counter].map((answer) => {
@@ -53,6 +56,9 @@ const getAnswer = (e) => {
     <section>
       <ul className="answer__list">{mapped}</ul>
       <Button onClick={(e) => getAnswer(e)}>Submit</Button>
+      {
+        isSubmit ? <Button onClick={() => setCounter(counter + 1)} type={"button"} >Next</Button> : null
+      }
     </section>
   );
 }

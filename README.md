@@ -54,7 +54,6 @@ next :
 -answers array
 -solutions array
 
-
 -todos :
 
 - display next button when answer is shown
@@ -67,14 +66,13 @@ on submit run a function, this function: - runs getAnswer() - compare the checke
 
 compare the checked box with solution
 
+    next:
+            - on event of button submit:
+              - on Submit:
+                  - hide Submit
 
-  - if box index matches with the solution => increase the score state
-            - need to have context of setState function of score
-                - need to build useContext hook because Status &  Question are on the same nesting-level
-            - comparison index to solution, if true, run setScore
-    -compare the checkbox index with the solution, if === then increase the state of the score
-    
-    next: 
-            - on event of button submit,enable the Next button
-              - change his css; his css by default is display none; 
-              - sea : how to enable disable buttons
+                - on Next:
+                       -remove the border on the li's
+
+              - re-organize Answer; collect into functions
+              - globalize toggling with ternaries booleans?
