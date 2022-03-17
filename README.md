@@ -73,6 +73,18 @@ compare the checked box with solution
 
                 - on Next:
                        -remove the border on the li's
+                        - re-organize Answer; collect into functions
+                      - globalize toggling with ternaries booleans?
 
-              - re-organize Answer; collect into functions
-              - globalize toggling with ternaries booleans?
+
+
+- onclick Next, achieve that new answers are displayed, the css border property is neutralized
+
+// next:
+- try it with isSubmit boolean state, not working
+- I need useEffect because when the state of counter get updated, we need a re-rendering of the page
+      - because we need a restart
+      - steps:
+            - where should useEffect live? in Quiz
+            - next button updates the state counter
+            - 

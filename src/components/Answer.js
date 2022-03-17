@@ -14,27 +14,29 @@ for (let key in data) {
 
 function Answer({ counter,setCounter }) {
  
-const [solution,setSolution]  = useState(solutions[0][0]);
-const {score,setScore} = useContext(QuizContext);
+let [solution,setSolution]  = useState(solutions[0][0]);
 let [isSubmit,setIsSubmit] = useState(false);
+let {score,setScore} = useContext(QuizContext);
 
 const getAnswer = (e) => {
   e.preventDefault();
-  let items = document.querySelectorAll('.answer__item')
-  items.forEach((item,index) => {
-      if(index === solution) {
-        item.style.cssText = "border : 2px solid green;"
+ 
+ if (!isSubmit) {
+   let items = document.querySelectorAll('.answer__item')
+   items.forEach((item,index) => {
+     if(index === solution) {
+       item.style.cssText = "border : 2px solid green;"
       } else {
         item.style.cssText = "border : 2px solid red;"
       }
     })
+  }
 
     let checkboxes = document.querySelectorAll("#checkbox");
     checkboxes.forEach((checkbox,index) => {
       if (checkbox.checked) {
         if (index === solution) {
           setScore(score + 1);
-          console.log(score);
         }
       }
     })
@@ -55,9 +57,11 @@ const getAnswer = (e) => {
   return (
     <section>
       <ul className="answer__list">{mapped}</ul>
-      <Button onClick={(e) => getAnswer(e)}>Submit</Button>
       {
-        isSubmit ? <Button onClick={() => setCounter(counter + 1)} type={"button"} >Next</Button> : null
+        !isSubmit ? <Button onClick={(e) => getAnswer(e)}>Submit</Button> : null
+      }
+      {
+        isSubmit ? <Button onClick={() => setCounter(counter + 1)} type={"button"}>Next</Button> : null
       }
     </section>
   );
