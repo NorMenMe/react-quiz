@@ -74,3 +74,7 @@ next: compare the checked box with solution
             - how do I get context of setScore ? possible with props instead of useContext ?
 
     -compare the checkbox index with the solution, if === then increase the state of the score
+    
+
+    #// styling the Quiz:
+    // 

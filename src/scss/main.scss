@@ -1,6 +1,6 @@
 @import "~bootstrap/scss/bootstrap";
 @import "./components/status.scss";
-@import "./components/answer.scss";
+// @import "./components/answer.scss";
 
 // ui kit => reusable components
 .ui-btn {
@@ -17,4 +17,15 @@
   }
 }
 
+.header{
+    width: 80%;
+    margin: 3rem auto;
+    display: flex;
+    flex-flow: column wrap;
+    text-align : center;
+}
 
+
+.answer__list {
+  list-style-type: none;
+  }
