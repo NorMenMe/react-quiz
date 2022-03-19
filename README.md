@@ -64,17 +64,42 @@ task: display the "next" button when the answer is shown
 steps:
 on submit run a function, this function: - runs getAnswer() - compare the checked box with solution - update the score - show next button
 
-next: compare the checked box with solution
+compare the checked box with solution
+
+    next:
+            - on event of button submit:
+              - on Submit:
+                  - hide Submit
+                  - show borders
+
+                - on Next:
+                       -remove the border on the li's
+                       -show Submit
+                       -reuse boolean state isSubmit?
+                       -show border only if booleans state isSubmit is set to false
+                       -toggle it always to opposite => !isSubmit
 
 
-  - if box index matches with the solution => increase the score state
-            - need to have context of setState function of score
-                - need to build useContext hook because Status &  Question are on the same nesting-level
-            - comparison index to solution, if true, run setScore
-            - how do I get context of setScore ? possible with props instead of useContext ?
+                       -click submit, isSubmit to true, click next, when rendering markup check if isSubmit true,
+                       - if true toggle it to false
+                       - event handler on next :
+                                           - setCounter
+                                           - setIsSubmit to opposite
+                       - call it handleNextClick
 
-    -compare the checkbox index with the solution, if === then increase the state of the score
-    
+            -next : how on Next to hide the borders
 
-    #// styling the Quiz:
-    // 
+              - re-organize Answer; collect into functions
+              - globalize toggling with ternaries booleans?
+
+
+- onclick Next, achieve that new answers are displayed, the css border property is neutralized
+
+// next:
+- try it with isSubmit boolean state, not working
+- I need useEffect because when the state of counter get updated, we need a re-rendering of the page
+      - because we need a restart
+      - steps:
+            - where should useEffect live? in Quiz
+            - next button updates the state counter
+            - 

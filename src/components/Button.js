@@ -2,7 +2,7 @@ import React from "react";
 import clsx from "clsx";
 
 function Button(props) {
-  let { onClick, children, type, className } = props;
+  let { onClick, children, type, className,disabled } = props;
 
   const classes = clsx("ui-btn", className);
 
@@ -12,7 +12,7 @@ function Button(props) {
 
   return (
     <>
-      <button type={type} className={classes} onClick={onClick}>
+      <button type={type} className={classes} onClick={onClick} disable={disabled}>
         {children}
         <i class="fas fa-arrow-right arrow"></i>
       </button>

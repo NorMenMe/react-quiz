@@ -1,6 +1,6 @@
-import React,{useState} from "react";
+import React,{useState,useContext} from "react";
 import data from "../data.js";
-import { Button } from "../helpers/importer";
+import { Button,QuizContext } from "../helpers/importer";
 
 // input
 let input = [];
@@ -12,34 +12,45 @@ for (let key in data) {
 }
 // -----------------------------------
 
-function Answer({ counter }) {
+function Answer({ counter,setCounter }) {
  
-const [solution,setSolution]  = useState(solutions[0][0])
+let [solution,setSolution]  = useState(solutions[0][0]);
+let [isSubmit,setIsSubmit] = useState(false);
+let {score,setScore} = useContext(QuizContext);
 
 const getAnswer = (e) => {
   e.preventDefault();
+  // show borders
   let items = document.querySelectorAll('.answer__item')
   items.forEach((item,index) => {
-    
       if(index === solution) {
-        console.log(solution);
         item.style.cssText = "border : 2px solid green;"
       } else {
         item.style.cssText = "border : 2px solid red;"
       }
-
     })
+  }
 
+    // check enabled checkbox
     let checkboxes = document.querySelectorAll("#checkbox");
     checkboxes.forEach((checkbox,index) => {
       if (checkbox.checked) {
-        console.log(index);
-        console.log(solution);
+        if (index === solution) {
+          setScore(score + 1);
+        }
       }
     })
 
-
+    // show Next button
+    setIsSubmit(true);
   }
+
+  const handleSubmitClick = () => {
+
+    setCounter(counter + 1);
+    setIsSubmit(!isSubmit);
+  }
+  console.log(isSubmit);
   
   const mapped = input[counter].map((answer) => {
     return <li className="answer__item">
@@ -54,7 +65,12 @@ const getAnswer = (e) => {
   return (
     <section>
       <ul className="answer__list">{mapped}</ul>
-      <Button onClick={(e) => getAnswer(e) }>Submit</Button>
+      {
+        isSubmit ? <Button onClick={() => handleSubmitClick()} type={"button"} >Next</Button> : null
+      }
+      {
+        isSubmit ? <Button onClick={() => setCounter(counter + 1)} type={"button"}>Next</Button> : null
+      }
     </section>
   );
 }

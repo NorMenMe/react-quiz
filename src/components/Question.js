@@ -1,6 +1,6 @@
-import React, {useContext } from "react";
+import React, { useContext } from "react";
 import data from "../data.js";
-import { Button, Answer,QuizContext } from "../helpers/importer";
+import { Answer,QuizContext } from "../helpers/importer";
 
 // storing the input
 let arrQuestions = [];
@@ -15,9 +15,8 @@ const {counter, setCounter}=useContext(QuizContext)
 
   return (
     <section className="question">
-      <p className="question__txt">{arrQuestions[counter]}</p>
-      <Answer counter={counter} />
-      {/* <Button onClick={() => incrementCounter()}>Next</Button> */}
+      <p className="question__text">{arrQuestions[counter]}</p>
+      <Answer counter={counter} setCounter={setCounter} />
     </section>
   );
 }
