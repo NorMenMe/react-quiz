@@ -81,10 +81,11 @@ compare the checked box with solution
 - onclick Next, achieve that new answers are displayed, the css border property is neutralized
 
 // next:
-- try it with isSubmit boolean state, not working
+
 - I need useEffect because when the state of counter get updated, we need a re-rendering of the page
+      - re-mounting the component from the origin without  border & enabled checkbox
       - because we need a restart
       - steps:
             - where should useEffect live? in Quiz
             - next button updates the state counter
-            - 
+            - built inside quiz, missing a task inside the first param

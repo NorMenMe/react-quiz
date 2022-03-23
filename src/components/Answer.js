@@ -21,7 +21,6 @@ let {score,setScore} = useContext(QuizContext);
 const getAnswer = (e) => {
   e.preventDefault();
  
- if (!isSubmit) {
    let items = document.querySelectorAll('.answer__item')
    items.forEach((item,index) => {
      if(index === solution) {
@@ -30,7 +29,6 @@ const getAnswer = (e) => {
         item.style.cssText = "border : 2px solid red;"
       }
     })
-  }
 
     let checkboxes = document.querySelectorAll("#checkbox");
     checkboxes.forEach((checkbox,index) => {
@@ -53,12 +51,14 @@ const getAnswer = (e) => {
              <p className="answer__text">{answer.text}</p>
            </li>;
   });
+
+  console.log(isSubmit);
   
   return (
     <section>
       <ul className="answer__list">{mapped}</ul>
       {
-        !isSubmit ? <Button onClick={(e) => getAnswer(e)}>Submit</Button> : null
+        isSubmit ? null : <Button onClick={(e) => getAnswer(e)}>Submit</Button> 
       }
       {
         isSubmit ? <Button onClick={() => setCounter(counter + 1)} type={"button"}>Next</Button> : null
