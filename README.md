@@ -104,3 +104,9 @@ compare the checked box with solution
             - where should useEffect live? in Quiz
             - next button updates the state counter
             - built inside quiz, missing a task inside the first param
+
+-on Button next, do I need the conditional rendering ?
+- useEffect is re-rendering the page
+- test diff with empty dependency
+- reset border & enabled checkbox with a conditional ?
+- 

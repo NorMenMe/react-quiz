@@ -1,4 +1,4 @@
-import React,{useState,useContext} from "react";
+import React,{useState,useContext,useEffect} from "react";
 import data from "../data.js";
 import { Button,QuizContext } from "../helpers/importer";
 
@@ -20,19 +20,12 @@ let {score,setScore} = useContext(QuizContext);
 
 const getAnswer = (e) => {
   e.preventDefault();
-<<<<<<< HEAD
  
+   // show borders
    let items = document.querySelectorAll('.answer__item')
    items.forEach((item,index) => {
      if(index === solution) {
        item.style.cssText = "border : 2px solid green;"
-=======
-  // show borders
-  let items = document.querySelectorAll('.answer__item')
-  items.forEach((item,index) => {
-      if(index === solution) {
-        item.style.cssText = "border : 2px solid green;"
->>>>>>> 6ab613e5bd32ae7995fe482304fa4bd30b6b600d
       } else {
         item.style.cssText = "border : 2px solid red;"
       }
@@ -52,12 +45,6 @@ const getAnswer = (e) => {
     setIsSubmit(true);
   }
 
-  const handleSubmitClick = () => {
-
-    setCounter(counter + 1);
-    setIsSubmit(!isSubmit);
-  }
-  console.log(isSubmit);
   
   const mapped = input[counter].map((answer) => {
     return <li className="answer__item">
@@ -69,17 +56,17 @@ const getAnswer = (e) => {
            </li>;
   });
 
+  useEffect(()=> {
+    console.log('mounted');
+  },[counter]);
+
   console.log(isSubmit);
-  
+
   return (
     <section>
       <ul className="answer__list">{mapped}</ul>
       {
-<<<<<<< HEAD
         isSubmit ? null : <Button onClick={(e) => getAnswer(e)}>Submit</Button> 
-=======
-        isSubmit ? <Button onClick={() => handleSubmitClick()} type={"button"} >Next</Button> : null
->>>>>>> 6ab613e5bd32ae7995fe482304fa4bd30b6b600d
       }
       {
         isSubmit ? <Button onClick={() => setCounter(counter + 1)} type={"button"}>Next</Button> : null

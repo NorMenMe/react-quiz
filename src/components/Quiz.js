@@ -7,7 +7,6 @@ function Quiz() {
 const [counter,setCounter]=useState(1)
 const [score,setScore]= useState(0);
 
-useEffect(()=> {},[counter]);
 
   return (
     <>
