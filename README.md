@@ -70,12 +70,27 @@ compare the checked box with solution
             - on event of button submit:
               - on Submit:
                   - hide Submit
+                  - show borders
 
                 - on Next:
                        -remove the border on the li's
-                        - re-organize Answer; collect into functions
-                      - globalize toggling with ternaries booleans?
+                       -show Submit
+                       -reuse boolean state isSubmit?
+                       -show border only if booleans state isSubmit is set to false
+                       -toggle it always to opposite => !isSubmit
 
+
+                       -click submit, isSubmit to true, click next, when rendering markup check if isSubmit true,
+                       - if true toggle it to false
+                       - event handler on next :
+                                           - setCounter
+                                           - setIsSubmit to opposite
+                       - call it handleNextClick
+
+            -next : how on Next to hide the borders
+
+              - re-organize Answer; collect into functions
+              - globalize toggling with ternaries booleans?
 
 
 - onclick Next, achieve that new answers are displayed, the css border property is neutralized
