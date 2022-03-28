@@ -34,6 +34,7 @@ const getAnswer = (e) => {
     // check enabled checkbox
     let checkboxes = document.querySelectorAll("#checkbox");
     checkboxes.forEach((checkbox,index) => {
+       console.log(checkbox);
       if (checkbox.checked) {
         if (index === solution) {
           setScore(score + 1);
