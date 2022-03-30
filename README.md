@@ -108,5 +108,12 @@ compare the checked box with solution
 -on Button next, do I need the conditional rendering ?
 - useEffect is re-rendering the page
 - test diff with empty dependency
+
+
+
+- check useEffect example in instagram clone:
+    - on re-render reset
+  
+
 - reset border & enabled checkbox with a conditional ?
-- 
+  - add an if !IsSubmit before border func & checkbox func; wrap it into a func ?

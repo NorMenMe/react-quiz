@@ -59,6 +59,7 @@ const getAnswer = (e) => {
 
   useEffect(()=> {
     console.log('mounted');
+    setIsSubmit(false);
   },[counter]);
 
   console.log(isSubmit);
