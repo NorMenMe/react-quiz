@@ -95,7 +95,7 @@ compare the checked box with solution
 
 - onclick Next, achieve that new answers are displayed, the css border property is neutralized
 
-// next:
+
 
 - I need useEffect because when the state of counter get updated, we need a re-rendering of the page
       - re-mounting the component from the origin without  border & enabled checkbox
@@ -107,13 +107,13 @@ compare the checked box with solution
 
 -on Button next, do I need the conditional rendering ?
 - useEffect is re-rendering the page
-- test diff with empty dependency
 
+-sea: 
+- useEffect re-render disabling css properties
+- useEffect restore component from start
+- useEffect initial state
 
+// next:
 
-- check useEffect example in instagram clone:
-    - on re-render reset
-  
-
-- reset border & enabled checkbox with a conditional ?
-  - add an if !IsSubmit before border func & checkbox func; wrap it into a func ?
+- get Help: Leon or "Teilos"
+- prep it & do some style

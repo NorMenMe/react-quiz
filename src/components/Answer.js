@@ -21,20 +21,20 @@ let {score,setScore} = useContext(QuizContext);
 const getAnswer = (e) => {
   e.preventDefault();
  
-   // show borders
-   let items = document.querySelectorAll('.answer__item')
-   items.forEach((item,index) => {
-     if(index === solution) {
-       item.style.cssText = "border : 2px solid green;"
-      } else {
-        item.style.cssText = "border : 2px solid red;"
-      }
-    })
 
+    // show borders
+    let items = document.querySelectorAll('.answer__item')
+    items.forEach((item,index) => {    
+        if(index === solution) {
+          item.style.cssText = "border : 2px solid green;"
+        } else {
+          item.style.cssText = "border : 2px solid red;"
+        }
+    })
+    
     // check enabled checkbox
     let checkboxes = document.querySelectorAll("#checkbox");
     checkboxes.forEach((checkbox,index) => {
-       console.log(checkbox);
       if (checkbox.checked) {
         if (index === solution) {
           setScore(score + 1);
