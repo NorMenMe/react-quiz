@@ -112,8 +112,10 @@ compare the checked box with solution
 - useEffect re-render disabling css properties
 - useEffect restore component from start
 - useEffect initial state
+- useEffect reset Button
 
 // next:
 
+- when counter state change => run a reset() that resets the css & the border ? to complicated....
 - get Help: Leon or "Teilos"
 - prep it & do some style
