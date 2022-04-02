@@ -6,8 +6,14 @@ function Status({score}) {
   const {counter, setCounter} = useContext(QuizContext);
   return (
     <section className="status">
-      <p className="question">Question {counter}/5</p>
-      <p className="score">Score : {score}</p>
+      <ul className="status__list">
+        <li className="status__item">
+          <p className="status__text">Question {counter}/5</p>
+        </li>
+        <li className="status__item">
+          <p className="status__text">Score : {score}</p>
+        </li>
+      </ul>
     </section>
   );
 }

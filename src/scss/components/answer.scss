@@ -1,3 +1,7 @@
 .answer__list {
-list-style-type: none;
+@include reset-list;
+}
+
+.answer__item {
+	@include evenly;
 }

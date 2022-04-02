@@ -49,11 +49,8 @@ const getAnswer = (e) => {
   
   const mapped = input[counter].map((answer) => {
     return <li className="answer__item">
-             <div className="answer__checkbox">
-                <label htmlFor='checkbox'></label>
-                <input type='checkbox' id='checkbox'/>
-             </div>
-             <p className="answer__text">{answer.text}</p>
+              <input type='checkbox' id='answer__checkbox'/>
+              <p className="answer__text">{answer.text}</p>
            </li>;
   });
 
@@ -65,7 +62,7 @@ const getAnswer = (e) => {
   console.log(isSubmit);
 
   return (
-    <section>
+    <section className="answer">
       <ul className="answer__list">{mapped}</ul>
       {
         isSubmit ? null : <Button onClick={(e) => getAnswer(e)}>Submit</Button> 

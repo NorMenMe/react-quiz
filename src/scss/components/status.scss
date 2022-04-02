@@ -1,7 +1,8 @@
-@import "../abstracts/mixins";
-
-.status {
-  width: 100%;
-  @include between;
-  padding: 2%;
+.status__list {
+  width: 300px;
+  margin: 0 auto;
+  padding: 0;
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
 }
