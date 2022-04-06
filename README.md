@@ -1,6 +1,21 @@
+### start coding:
+
+```
+git clone git@github.com:NorMenMe/react-quiz.git
+
+npm i
+
+code .
+
+npm start
+
+```
+
+
+
 #### Notes
 
-taske says following components are needed:
+the task says following components are needed:
 App, Home, Error404, StatusBar, Question, Answer, Result
 
 - UI Kit :
@@ -116,6 +131,17 @@ compare the checked box with solution
 
 // next:
 
+- poolish the semantic for showing to Leon
+
 - when counter state change => run a reset() that resets the css & the border ? to complicated....
-- get Help: Leon or "Teilos"
-- prep it & do some style
+- get Help: from Leon  ?
+
+
+-issue:
+    - wenn die checkboxes gechecked sind, nachdem "submit" button geklickt ist
+    - beim "next" button event, kommt die neue Quiz Frage,
+    - die rote border und die checkbox auf Anfang sollen zurückgesetzt werden; da liegt mein Problem
+    - useEffect re-rendert wenn "counter" state sich verändert aber kein reset erfolgt
+
+ich bräuchte einen hint,
+soll ich weiter den useEffect Weg gehen ? oder auf der falschen Spur ?
