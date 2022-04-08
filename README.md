@@ -138,10 +138,30 @@ compare the checked box with solution
 
 
 -issue:
-    - wenn die checkboxes gechecked sind, nachdem "submit" button geklickt ist
+    - wenn die checkboxes gechecked sind, nachdem das "submit" button geklickt ist,
     - beim "next" button event, kommt die neue Quiz Frage,
     - die rote border und die checkbox auf Anfang sollen zurückgesetzt werden; da liegt mein Problem
     - useEffect re-rendert wenn "counter" state sich verändert aber kein reset erfolgt
 
 ich bräuchte einen hint,
 soll ich weiter den useEffect Weg gehen ? oder auf der falschen Spur ?
+
+
+wenn die checkboxe gechecked ist, 
+nachdem das "submit" button geklickt ist,
+rot/grüne borders & die gecheckte checkbox werden dargestellt;
+beim "next" button event, kommt die neue Quiz Frage,
+die rote border und die checkbox sollen auf "Anfang" zurückgesetzt werden; 
+bzw. die border  und das "check" der checkbox verschwinden. 
+Da liegt mein Problem;
+useEffect re-rendert wenn "counter" state sich verändert
+aber die Komponente wird nicht vom start Zustand gerendert;
+
+hast du einen hint?
+soll ich weiter den useEffect Weg gehen ? oder auf der falschen Spur ?
+
+review: 
+bisschen umständlich mit den daten find ich. wenn du die schon selber definierst dann versuchs dir doch vielleicht bisschen einfacher zu machen. mit den ganzen mappings und listen von listen ist ganz shcön schwer durchzublicken
+bisschen umständlich mit den daten find ich. wenn du die schon selber definierst dann versuchs dir doch vielleicht bisschen einfacher zu machen. mit den ganzen mappings und listen von listen ist ganz shcön schwer durchzublicken
+und der ternary operator darunter. du hast zwei mal {isSubmit} da stehen. das geht auf jeden entweder in einen ternary oder ganz ohne und die props abhängig von isSubmit setzen z.B.
+und das wo die borders setzt. das macht man eigentlich nicht so in react. also inline styles setzen so. das würde ich nur in super spezial fällen machen. vielleicht kannst du auch das auslagern wenn über die answers mapst denen direkt ne klasse mitgeben die entweder die border rot oder grün macht
