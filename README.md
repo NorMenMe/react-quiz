@@ -161,7 +161,16 @@ hast du einen hint?
 soll ich weiter den useEffect Weg gehen ? oder auf der falschen Spur ?
 
 review: 
-bisschen umständlich mit den daten find ich. wenn du die schon selber definierst dann versuchs dir doch vielleicht bisschen einfacher zu machen. mit den ganzen mappings und listen von listen ist ganz shcön schwer durchzublicken
+bisschen umständlich mit den daten find ich. wenn du die schon selber definierst dann versuchs dir doch vielleicht bisschen einfacher zu machen.
+
+  - create a data-importer
+  - wanna export only answers & solutions 
+  - steps:
+        - in data-importer 
+
+
+
+ mit den ganzen mappings und listen von listen ist ganz shcön schwer durchzublicken
 bisschen umständlich mit den daten find ich. wenn du die schon selber definierst dann versuchs dir doch vielleicht bisschen einfacher zu machen. mit den ganzen mappings und listen von listen ist ganz shcön schwer durchzublicken
 und der ternary operator darunter. du hast zwei mal {isSubmit} da stehen. das geht auf jeden entweder in einen ternary oder ganz ohne und die props abhängig von isSubmit setzen z.B.
 und das wo die borders setzt. das macht man eigentlich nicht so in react. also inline styles setzen so. das würde ich nur in super spezial fällen machen. vielleicht kannst du auch das auslagern wenn über die answers mapst denen direkt ne klasse mitgeben die entweder die border rot oder grün macht
