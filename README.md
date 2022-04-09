@@ -173,4 +173,25 @@ bisschen umständlich mit den daten find ich. wenn du die schon selber definiers
  mit den ganzen mappings und listen von listen ist ganz shcön schwer durchzublicken
 bisschen umständlich mit den daten find ich. wenn du die schon selber definierst dann versuchs dir doch vielleicht bisschen einfacher zu machen. mit den ganzen mappings und listen von listen ist ganz shcön schwer durchzublicken
 und der ternary operator darunter. du hast zwei mal {isSubmit} da stehen. das geht auf jeden entweder in einen ternary oder ganz ohne und die props abhängig von isSubmit setzen z.B.
-und das wo die borders setzt. das macht man eigentlich nicht so in react. also inline styles setzen so. das würde ich nur in super spezial fällen machen. vielleicht kannst du auch das auslagern wenn über die answers mapst denen direkt ne klasse mitgeben die entweder die border rot oder grün macht
+und das wo die borders setzt. das macht man eigentlich nicht so in react. also inline styles setzen so. das würde ich nur in super spezial fällen machen. 
+
+vielleicht kannst du auch das auslagern wenn über die answers mapst denen direkt ne klasse mitgeben die entweder die border rot oder grün macht
+
+
+-instead of cssText, use utility classes
+- achieve: when checkbox.check true attach a class "green" otherwise "red"
+    - assign conditionally a class
+    - inside the li 
+    - I need to check the object of <input>
+          - searching if checkbox is check
+
+
+
+-other approach : 
+    on getAnswer, select all <li> 's 
+    -check if their Nodechild, the checkbox is checked, according to that add a class 
+
+
+    or this what you have written but in the jsx
+    -insie a map add another loop to get access tho the checkbox property 
+    
