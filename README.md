@@ -182,6 +182,7 @@ vielleicht kannst du auch das auslagern wenn über die answers mapst denen direk
 - achieve: when checkbox.check true attach a class "green" otherwise "red"
     - assign conditionally a class
     - inside the li 
+    - 
     - I need to check the object of <input>
           - searching if checkbox is check
 
@@ -195,3 +196,13 @@ vielleicht kannst du auch das auslagern wenn über die answers mapst denen direk
     or this what you have written but in the jsx
     -insie a map add another loop to get access tho the checkbox property 
     
+
+    
+    - !no inline css
+    - assign conditionally a class
+    - inside the li 
+    - in the object prop Classname: 
+    - access it , refacor it as ternary
+         // next: 
+    - prep utility class 
+    - ternary, item.classList.add("border--red")

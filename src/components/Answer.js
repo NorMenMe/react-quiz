@@ -8,7 +8,7 @@ let [solution,setSolution] = useState(solutions[0][0]);
 let [isSubmit,setIsSubmit] = useState(false);
 let {score,setScore} = useContext(QuizContext);
 
-const getAnswer = (e) => {
+let getAnswer = (e) => {
   e.preventDefault();
  
     // show borders
