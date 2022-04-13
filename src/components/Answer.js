@@ -15,9 +15,9 @@ let getAnswer = (e) => {
     let items = document.querySelectorAll(".answer__item")
     items.forEach((item,index) => {    
         if(index === solution) {
-          item.style.cssText = "border : 2px solid green;"
+          item.classList.add("answer__item--border-true");
         } else {
-          item.style.cssText = "border : 2px solid red;"
+          item.classList.add("answer__item--border-false");
         }
     })
     

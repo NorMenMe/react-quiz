@@ -14,3 +14,11 @@
 .answer__item p {
 	flex-basis: 50%;
 }
+
+.answer__item--border-true {
+	border: 2px solid green;
+}
+
+.answer__item--border-false {
+	border: 2px solid red;
+}
