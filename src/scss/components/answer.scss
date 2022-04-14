@@ -1,24 +1,25 @@
 .answer__list {
-@include reset-list;
+  @include reset-list;
 }
 
 .answer__item {
-	display: flex;
-	flex-flow: row nowrap;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
 }
 
 .answer__item input {
-	flex-basis: 50%;
+  flex-basis: 50%;
 }
 
 .answer__item p {
-	flex-basis: 50%;
+  flex-basis: 50%;
 }
 
 .answer__item--border-true {
-	border: 2px solid green;
+  border: 2px solid green;
 }
 
 .answer__item--border-false {
-	border: 2px solid red;
+  border: 2px solid red;
 }

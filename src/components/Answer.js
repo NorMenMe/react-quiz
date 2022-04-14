@@ -9,7 +9,7 @@ let [isSubmit,setIsSubmit] = useState(false);
 let {score,setScore} = useContext(QuizContext);
 
 let getAnswer = (e) => {
-  e.preventDefault();
+    e.preventDefault();
  
     // show borders
     let items = document.querySelectorAll(".answer__item")
@@ -39,12 +39,14 @@ let getAnswer = (e) => {
     console.log('mounted');
   },[counter]);
 
+  console.log(isSubmit);
+
   return (
     <section className="answer">
       <ul className="answer__list">
         {
-          input[counter].map((answer) => {
-            return <li className="answer__item">
+          input[counter].map((answer,index) => {
+            return <li key={index} className="answer__item">
                       <input type="checkbox" className="answer__checkbox"/>
                       <p className="answer__text">{answer.text}</p>
                    </li>;

@@ -11,8 +11,6 @@ npm start
 
 ```
 
-
-
 #### Notes
 
 the task says following components are needed:
@@ -107,23 +105,16 @@ compare the checked box with solution
               - re-organize Answer; collect into functions
               - globalize toggling with ternaries booleans?
 
-
 - onclick Next, achieve that new answers are displayed, the css border property is neutralized
 
-
-
-- I need useEffect because when the state of counter get updated, we need a re-rendering of the page
-      - re-mounting the component from the origin without  border & enabled checkbox
-      - because we need a restart
-      - steps:
-            - where should useEffect live? in Quiz
-            - next button updates the state counter
-            - built inside quiz, missing a task inside the first param
+- I need useEffect because when the state of counter get updated, we need a re-rendering of the page - re-mounting the component from the origin without border & enabled checkbox - because we need a restart - steps: - where should useEffect live? in Quiz - next button updates the state counter - built inside quiz, missing a task inside the first param
 
 -on Button next, do I need the conditional rendering ?
+
 - useEffect is re-rendering the page
 
--sea: 
+-sea:
+
 - useEffect re-render disabling css properties
 - useEffect restore component from start
 - useEffect initial state
@@ -134,25 +125,19 @@ compare the checked box with solution
 - poolish the semantic for showing to Leon
 
 - when counter state change => run a reset() that resets the css & the border ? to complicated....
-- get Help: from Leon  ?
+- get Help: from Leon ?
 
-
--issue:
-    - wenn die checkboxes gechecked sind, nachdem das "submit" button geklickt ist,
-    - beim "next" button event, kommt die neue Quiz Frage,
-    - die rote border und die checkbox auf Anfang sollen zurückgesetzt werden; da liegt mein Problem
-    - useEffect re-rendert wenn "counter" state sich verändert aber kein reset erfolgt
+-issue: - wenn die checkboxes gechecked sind, nachdem das "submit" button geklickt ist, - beim "next" button event, kommt die neue Quiz Frage, - die rote border und die checkbox auf Anfang sollen zurückgesetzt werden; da liegt mein Problem - useEffect re-rendert wenn "counter" state sich verändert aber kein reset erfolgt
 
 ich bräuchte einen hint,
 soll ich weiter den useEffect Weg gehen ? oder auf der falschen Spur ?
 
-
-wenn die checkboxe gechecked ist, 
+wenn die checkboxe gechecked ist,
 nachdem das "submit" button geklickt ist,
 rot/grüne borders & die gecheckte checkbox werden dargestellt;
 beim "next" button event, kommt die neue Quiz Frage,
-die rote border und die checkbox sollen auf "Anfang" zurückgesetzt werden; 
-bzw. die border  und das "check" der checkbox verschwinden. 
+die rote border und die checkbox sollen auf "Anfang" zurückgesetzt werden;
+bzw. die border und das "check" der checkbox verschwinden.
 Da liegt mein Problem;
 useEffect re-rendert wenn "counter" state sich verändert
 aber die Komponente wird nicht vom start Zustand gerendert;
@@ -160,49 +145,44 @@ aber die Komponente wird nicht vom start Zustand gerendert;
 hast du einen hint?
 soll ich weiter den useEffect Weg gehen ? oder auf der falschen Spur ?
 
-review: 
+review:
 bisschen umständlich mit den daten find ich. wenn du die schon selber definierst dann versuchs dir doch vielleicht bisschen einfacher zu machen.
 
-  - create a data-importer
-  - wanna export only answers & solutions 
-  - steps:
-        - in data-importer 
+- create a data-importer
+- wanna export only answers & solutions
+- steps: - in data-importer
 
-
-
- mit den ganzen mappings und listen von listen ist ganz shcön schwer durchzublicken
+mit den ganzen mappings und listen von listen ist ganz shcön schwer durchzublicken
 bisschen umständlich mit den daten find ich. wenn du die schon selber definierst dann versuchs dir doch vielleicht bisschen einfacher zu machen. mit den ganzen mappings und listen von listen ist ganz shcön schwer durchzublicken
 und der ternary operator darunter. du hast zwei mal {isSubmit} da stehen. das geht auf jeden entweder in einen ternary oder ganz ohne und die props abhängig von isSubmit setzen z.B.
-und das wo die borders setzt. das macht man eigentlich nicht so in react. also inline styles setzen so. das würde ich nur in super spezial fällen machen. 
+und das wo die borders setzt. das macht man eigentlich nicht so in react. also inline styles setzen so. das würde ich nur in super spezial fällen machen.
 
 vielleicht kannst du auch das auslagern wenn über die answers mapst denen direkt ne klasse mitgeben die entweder die border rot oder grün macht
 
-
 -instead of cssText, use utility classes
+
 - achieve: when checkbox.check true attach a class "green" otherwise "red"
-    - assign conditionally a class
-    - inside the li 
-    - 
-    - I need to check the object of <input>
-          - searching if checkbox is check
+  - assign conditionally a class
+  - inside the li
+  -
+  - I need to check the object of <input> - searching if checkbox is check
 
-
-
--other approach : 
-    on getAnswer, select all <li> 's 
-    -check if their Nodechild, the checkbox is checked, according to that add a class 
-
+-other approach :
+on getAnswer, select all <li> 's
+-check if their Nodechild, the checkbox is checked, according to that add a class
 
     or this what you have written but in the jsx
-    -insie a map add another loop to get access tho the checkbox property 
-    
+    -insie a map add another loop to get access tho the checkbox property
 
-    
-    - !no inline css
-    - assign conditionally a class
-    - inside the li 
-    - in the object prop Classname: 
-    - access it , refacor it as ternary
-         // next: 
-    - prep utility class 
-    - ternary, item.classList.add("border--red")
+    -useEffect , counter state change:
+    -run a function that deletes
+    - try this https://www.codingdeft.com/posts/react-refresh-page/
+
+//next :
+build a function triggered when "Next" button is clicked: is it the right order ?
+-update counter +1
+-remove classes
+-checkbox.checked to false
+-toggle isSubmit to false
+
+      - too long ? move it to another module
