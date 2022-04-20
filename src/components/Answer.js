@@ -35,6 +35,15 @@ let getAnswer = (e) => {
     setIsSubmit(true);
   }
 
+  // let handleNextClick = () => {
+  //   setCounter(counter + 1)};
+
+  //   let items = document.querySelectorAll(".answer__item")
+  //   items.forEach((item,index) => {    
+  //     item.classList.remove()
+  //   })
+  // }
+
   useEffect(()=> {
     console.log('mounted');
   },[counter]);
