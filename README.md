@@ -182,6 +182,7 @@ on getAnswer, select all <li> 's
 build a function triggered when "Next" button is clicked: is it the right order ?
 -update counter +1
 -remove classes
+
 -checkbox.checked to false
 -toggle isSubmit to false
 

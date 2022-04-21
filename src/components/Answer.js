@@ -35,14 +35,14 @@ let getAnswer = (e) => {
     setIsSubmit(true);
   }
 
-  // let handleNextClick = () => {
-  //   setCounter(counter + 1)};
+  let handleNextClick = () => {
+    setCounter(counter + 1);
 
-  //   let items = document.querySelectorAll(".answer__item")
-  //   items.forEach((item,index) => {    
-  //     item.classList.remove()
-  //   })
-  // }
+    let items = document.querySelectorAll('.answer__item')
+    items.forEach((item,index) => {    
+      item.classList.remove('answer__item--border-true', 'answer__item--border-false');
+    })
+  }
 
   useEffect(()=> {
     console.log('mounted');
@@ -63,7 +63,7 @@ let getAnswer = (e) => {
         }
       </ul>
         {
-          isSubmit ? <Button onClick={() => setCounter(counter + 1)} type={"button"}>Next</Button> : <Button onClick={(e) => getAnswer(e)}>Submit</Button> 
+          isSubmit ? <Button type={"button"} onClick={() => {handleNextClick()}}>Next</Button> : <Button onClick={(e) => getAnswer(e)}>Submit</Button> 
         }
     </section>
   );
