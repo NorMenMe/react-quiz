@@ -8,7 +8,7 @@ function Status({score}) {
     <section className="status">
       <ul className="status__list">
         <li className="status__item">
-          <p className="status__text">Question {counter}/5</p>
+          <p className="status__text">Question {counter}/10</p>
         </li>
         <li className="status__item">
           <p className="status__text">Score : {score}</p>

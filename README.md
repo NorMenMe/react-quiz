@@ -179,11 +179,13 @@ on getAnswer, select all <li> 's
     - try this https://www.codingdeft.com/posts/react-refresh-page/
 
 //next :
-build a function triggered when "Next" button is clicked: is it the right order ?
--update counter +1
--remove classes
 
--checkbox.checked to false
--toggle isSubmit to false
+  -change the question status 
+  - check the solution, if more solutions, show all the other
+    - read Leon about input data
+    - achieve:
+        - according to the scope of each question
+        - if the index is equal of one of the item in the scope solution array 
+  - @css the number is not centered
 
       - too long ? move it to another module
