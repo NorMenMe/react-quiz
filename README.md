@@ -184,8 +184,13 @@ on getAnswer, select all <li> 's
   - check the solution, if more solutions, show all the other
     - read Leon about input data
     - achieve:
-        - according to the scope of each question
+        - get the solution scope according to the scope of each question
+        => receive state question number to be passed as the index for the array of array of the solutions
+
         - if the index is equal of one of the item in the scope solution array 
+          => compare the index through all the items; iterate, 
+              each current item compared through all the solutions items;
+
   - @css the number is not centered
 
       - too long ? move it to another module

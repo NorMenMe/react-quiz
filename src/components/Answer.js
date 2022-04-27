@@ -12,23 +12,29 @@ let getAnswer = (e) => {
 
     // get the scope of current solution
     // solutions[counter];
-    console.log(counter);
-    console.log(solutions);
-    console.log(solutions[counter]);
+    // console.log(counter);
+    // console.log(solutions);
+    // console.log(solutions[counter]);
+
+    solutions[counter].forEach( currentSolution => {
 
     // show borders
     let items = document.querySelectorAll(".answer__item")
-    items.forEach((item,index) => {    
+    items.forEach((item,index) => {   
+        console.log(currentSolution);
         if(index === solution) {
           item.classList.add("answer__item--border-true");
         } else {
           item.classList.add("answer__item--border-false");
         }
     })
+  })
+
     
     // check enabled checkbox
     let checkboxes = document.querySelectorAll(".answer__checkbox");
     checkboxes.forEach((checkbox,index) => {
+      console.dir(checkbox);
       if (checkbox.checked) {
         if (index === solution) {
           setScore(score + 1);
