@@ -16,19 +16,20 @@ let getAnswer = (e) => {
     // console.log(solutions);
     // console.log(solutions[counter]);
 
-    solutions[counter].forEach( currentSolution => {
-
+    
     // show borders
     let items = document.querySelectorAll(".answer__item")
     items.forEach((item,index) => {   
-        console.log(currentSolution);
-        if(index === solution) {
-          item.classList.add("answer__item--border-true");
-        } else {
-          item.classList.add("answer__item--border-false");
-        }
+        solutions[counter].forEach(currentSolution => {
+          console.log(index);
+          console.log(currentSolution);
+          if(index === currentSolution) {
+            item.classList.add("answer__item--border-true");
+          } else {
+            item.classList.add("answer__item--border-false");
+          }
+        })
     })
-  })
 
     
     // check enabled checkbox
