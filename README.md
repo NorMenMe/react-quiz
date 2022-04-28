@@ -180,17 +180,11 @@ on getAnswer, select all <li> 's
 
 //next :
 
-  -change the question status 
-  - check the solution, if more solutions, show all the other
-    - read Leon about input data
-    - achieve:
-        - get the solution scope according to the scope of each question
-        => receive state question number to be passed as the index for the array of array of the solutions
+- issues:
 
-        - if the index is equal of one of the item in the scope solution array 
-          => compare the index through all the items; iterate, 
-              each current item compared through all the solutions items;
+  - wrong status: onlaod shows 1, on submit counter get to 1, so default counter state is 0 but has to be shown as 1
+    - useEffect ?
 
-  - @css the number is not centered
+- @css the number is not centered
 
-      - too long ? move it to another module
+- refactor ternary Buttons ?

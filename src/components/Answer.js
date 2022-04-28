@@ -10,34 +10,21 @@ let {score,setScore} = useContext(QuizContext);
 let getAnswer = (e) => {
     e.preventDefault();
 
-    // get the scope of current solution
-    // solutions[counter];
-    // console.log(counter);
-    // console.log(solutions);
-    // console.log(solutions[counter]);
-
-    
-    // show borders
+    // show borders of correct/wrong solution
     let items = document.querySelectorAll(".answer__item")
     items.forEach((item,index) => {   
-        solutions[counter].forEach(currentSolution => {
-          console.log(index);
-          console.log(currentSolution);
-          if(index === currentSolution) {
+          if(solutions[counter].includes(index)) {
             item.classList.add("answer__item--border-true");
           } else {
             item.classList.add("answer__item--border-false");
           }
-        })
     })
 
-    
     // check enabled checkbox
     let checkboxes = document.querySelectorAll(".answer__checkbox");
     checkboxes.forEach((checkbox,index) => {
-      console.dir(checkbox);
       if (checkbox.checked) {
-        if (index === solution) {
+        if (solutions[counter].includes(index)) {
           setScore(score + 1);
         }
       }
