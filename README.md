@@ -178,13 +178,23 @@ on getAnswer, select all <li> 's
     -run a function that deletes
     - try this https://www.codingdeft.com/posts/react-refresh-page/
 
+
+
+  -change the question status 
+  - check the solution, if more solutions, show all the other
+    - read Leon about input data
+
 //next :
+    
+    - state of the question on load
+    - question state should start by one
 
-- issues:
+  - @css the number is not centered
 
-  - wrong status: onlaod shows 1, on submit counter get to 1, so default counter state is 0 but has to be shown as 1
-    - useEffect ?
+      - too long ? move it to another module
 
-- @css the number is not centered
 
-- refactor ternary Buttons ?
+
+ - ? to Leon: line 27, for the else returning a "" for saying return nothing, better practice ?
+ - 
+  - 
