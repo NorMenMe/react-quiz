@@ -4,12 +4,14 @@ import { Header, Status, Question, QuizContext } from "../helpers/importer.js";
 
 
 function Quiz() {
-const [counter,setCounter]=useState(0);
-const [score,setScore]= useState(0);
+let [counter,setCounter]=useState(0);
+let [score,setScore]= useState(0);
+let [isSubmit,setIsSubmit] = useState(false);
+
 
   return (
     <>
-      <QuizContext.Provider value={{ counter, setCounter,score,setScore }}>
+      <QuizContext.Provider value={{ counter, setCounter,score,setScore, isSubmit }}>
         <Header />
         <Status score={score}/>
         <Question />

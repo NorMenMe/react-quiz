@@ -3,7 +3,8 @@ import QuizContext from "./CreateContext";
 
 
 function Status({score}) {
-  const {counter, setCounter} = useContext(QuizContext);
+  const {counter, setCounter, isSubmit} = useContext(QuizContext);
+  console.log(isSubmit);
 
   return (
     <section className="status">

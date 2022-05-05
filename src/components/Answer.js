@@ -4,8 +4,8 @@ import { Button,QuizContext } from "../helpers/importer";
 
 function Answer({ counter,setCounter }) {
 let [solution,setSolution] = useState(solutions[0][0]);
-let [isSubmit,setIsSubmit] = useState(false);
-let {score,setScore} = useContext(QuizContext);
+// let [isSubmit,setIsSubmit] = useState(false);
+let {score,setScore, isSubmit, setIsSubmit} = useContext(QuizContext);
 
 let getAnswer = (e) => {
     e.preventDefault();
@@ -33,8 +33,6 @@ let getAnswer = (e) => {
     // show Next button
     setIsSubmit(true);
   }
-
-  console.log(isSubmit);
 
     // click Next button
   let handleNextClick = () => {

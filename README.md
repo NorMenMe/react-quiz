@@ -181,12 +181,18 @@ on getAnswer, select all <li> 's
 - issues:
 
   - wrong status: onlaod shows 0, on submit counter get to 1, so default counter state is 0 but has to be shown as 1 - on Submit button replace a variable with the state - check a boolean state, for e.g isSubmit -
-    //next : - add a ternary: - state isSubmit into Context - retrieve it
 
+    - add a ternary:
+      - if isSubmit false show 0 otherwise show counter state
+    - state isSubmit into Context
+
+  - //next :
+  - debug: stand, line 34 doesn't acceppt setIsSubmit fron context, test diff with state declared in the same module
+    - retrieve it
 
 - refactor ternary Buttons ?
 - pass counter into Status via props
 
- - ? to Leon: line 27, for the else returning a "" for saying return nothing, better practice ?
- - 
-  - 
+- ? to Leon: line 27, for the else returning a "" for saying return nothing, better practice ?
+- what is the let/const convetion @ Innovation team ?
+-
