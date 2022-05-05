@@ -178,22 +178,14 @@ on getAnswer, select all <li> 's
     -run a function that deletes
     - try this https://www.codingdeft.com/posts/react-refresh-page/
 
+- issues:
+
+  - wrong status: onlaod shows 0, on submit counter get to 1, so default counter state is 0 but has to be shown as 1 - on Submit button replace a variable with the state - check a boolean state, for e.g isSubmit -
+    //next : - add a ternary: - state isSubmit into Context - retrieve it
 
 
-  -change the question status 
-  - check the solution, if more solutions, show all the other
-    - read Leon about input data
-
-//next :
-    
-    - state of the question on load
-    - question state should start by one
-
-  - @css the number is not centered
-
-      - too long ? move it to another module
-
-
+- refactor ternary Buttons ?
+- pass counter into Status via props
 
  - ? to Leon: line 27, for the else returning a "" for saying return nothing, better practice ?
  - 

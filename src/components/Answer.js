@@ -34,6 +34,8 @@ let getAnswer = (e) => {
     setIsSubmit(true);
   }
 
+  console.log(isSubmit);
+
     // click Next button
   let handleNextClick = () => {
     setCounter(counter + 1);

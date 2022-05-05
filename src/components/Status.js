@@ -4,6 +4,7 @@ import QuizContext from "./CreateContext";
 
 function Status({score}) {
   const {counter, setCounter} = useContext(QuizContext);
+
   return (
     <section className="status">
       <ul className="status__list">

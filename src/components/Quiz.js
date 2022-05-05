@@ -7,8 +7,6 @@ function Quiz() {
 const [counter,setCounter]=useState(0);
 const [score,setScore]= useState(0);
 
-
-
   return (
     <>
       <QuizContext.Provider value={{ counter, setCounter,score,setScore }}>
