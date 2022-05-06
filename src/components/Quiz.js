@@ -11,7 +11,7 @@ let [isSubmit,setIsSubmit] = useState(false);
 
   return (
     <>
-      <QuizContext.Provider value={{ counter, setCounter,score,setScore, isSubmit }}>
+      <QuizContext.Provider value={{ counter, setCounter,score,setScore, isSubmit, setIsSubmit }}>
         <Header />
         <Status score={score}/>
         <Question />

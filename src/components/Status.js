@@ -4,13 +4,17 @@ import QuizContext from "./CreateContext";
 
 function Status({score}) {
   const {counter, setCounter, isSubmit} = useContext(QuizContext);
-  console.log(isSubmit);
+  const startCounter = 1;
+
 
   return (
     <section className="status">
       <ul className="status__list">
         <li className="status__item">
-          <p className="status__text">Question {counter}/10</p>
+          <p className="status__text">
+          { !isSubmit ? `Question ${startCounter}` : `Question ${counter}`  
+          }
+          </p>
         </li>
         <li className="status__item">
           <p className="status__text">Score : {score}</p>
