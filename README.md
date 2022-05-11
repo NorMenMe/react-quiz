@@ -48,8 +48,13 @@ App, Home, Error404, StatusBar, Question, Answer, Result
 
   depending on isSubmit , it toggles back to 0, back to start counter
 
+
+
   - //next :
-  -
+  - status state starting truthy, then once toggles to falsy and stays falsy
+    - status state into context,
+    - then into Answer, moved via context into Status
+    - 
   - detache it from isSubmit
   - use counter state for the if condition
 
