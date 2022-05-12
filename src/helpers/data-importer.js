@@ -8,4 +8,5 @@ for (let key in data) {
   solutions.push(data[key]["solutions"]);
 }
 
+
 export {input, solutions};

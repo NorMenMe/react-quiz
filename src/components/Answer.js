@@ -1,11 +1,9 @@
-import React,{useState,useContext} from "react";
+import React,{useContext} from "react";
 import {input, solutions} from "../helpers/data-importer"
 import { Button,QuizContext } from "../helpers/importer";
 
 function Answer({ counter,setCounter }) {
-let [solution,setSolution] = useState(solutions[0][0]);
-// let [isSubmit,setIsSubmit] = useState(false);
-let {score,setScore, isSubmit, setIsSubmit} = useContext(QuizContext);
+let {score,setScore, isSubmit, setIsSubmit,} = useContext(QuizContext);
 
 let getAnswer = (e) => {
     e.preventDefault();
@@ -47,6 +45,7 @@ let getAnswer = (e) => {
       checkboxes.forEach((checkbox) => checkbox.checked = false );
 
     setIsSubmit(false);
+    setCounter(counter + 1);
   }
 
   return (

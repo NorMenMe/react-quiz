@@ -4,7 +4,7 @@ import { Header, Status, Question, QuizContext } from "../helpers/importer.js";
 
 
 function Quiz() {
-let [counter,setCounter]=useState(0);
+let [counter,setCounter]=useState(1);
 let [score,setScore]= useState(0);
 let [isSubmit,setIsSubmit] = useState(false);
 

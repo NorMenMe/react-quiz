@@ -48,15 +48,9 @@ App, Home, Error404, StatusBar, Question, Answer, Result
 
   depending on isSubmit , it toggles back to 0, back to start counter
 
-
-
   - //next :
-  - status state starting truthy, then once toggles to falsy and stays falsy
-    - status state into context,
-    - then into Answer, moved via context into Status
-    - 
-  - detache it from isSubmit
-  - use counter state for the if condition
+  - simplify it
+  -
 
 TODO:
 
@@ -67,5 +61,8 @@ TODO:
 
 - ? to Leon: line 27, for the else returning a "" for saying return nothing, better practice ?
 -
-- what is the let/const convetion @ Innovation team ?
--
+- what is the let/const convention @ Innovation team ?
+- new approach:
+
+  - tree shaking
+  - refactor all let auf const
