@@ -14,7 +14,6 @@ function Button(props) {
     <>
       <button type={type} className={classes} onClick={onClick} disable={disabled}>
         {children}
-        <i className="fas fa-arrow-right arrow"></i>
       </button>
     </>
   );

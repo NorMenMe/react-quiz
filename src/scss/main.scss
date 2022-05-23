@@ -9,17 +9,23 @@
 
 // ui kit => reusable components
 .ui-btn {
-  background-color: #1266f1;
   color: white;
   border: none;
   padding: 1%;
   font-size: 18px;
   font-weight: 600;
   border-radius: 4px;
+  padding: 1rem 2rem;
+  background-image: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
+
+  &:hover {
+    background-image: linear-gradient(120deg, #a1c4fd 70%, #c2e9fb 100%);
+  }
 
   .arrow {
     margin-left: 0.3rem;
   }
+
 }
 
 .header{

@@ -1,8 +1,7 @@
 import React, { useState, useContext } from "react";
 import QuizContext from "./CreateContext";
 
-function Status({score}) {
-  const {counter, setCounter, isSubmit} = useContext(QuizContext);
+function Status({score,counter}) {
 
   return (
     <section className="status">

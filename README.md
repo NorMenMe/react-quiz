@@ -49,8 +49,17 @@ App, Home, Error404, StatusBar, Question, Answer, Result
   depending on isSubmit , it toggles back to 0, back to start counter
 
   - //next :
-  - simplify it
-  -
+  
+  - css:
+        -  of landing page
+        -  buttons not bootstrap
+
+
+  - when multiple correct answers:
+              -  if a wrong one is also clicked, the score shouldn't increase
+              -  if not all the correct are clicked, the score shouldn't increase
+  - tree shaking
+  - refactor all let auf const
 
 TODO:
 
@@ -62,7 +71,6 @@ TODO:
 - ? to Leon: line 27, for the else returning a "" for saying return nothing, better practice ?
 -
 - what is the let/const convention @ Innovation team ?
-- new approach:
 
-  - tree shaking
-  - refactor all let auf const
+
+
