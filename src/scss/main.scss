@@ -4,6 +4,18 @@
 @import "./components/status.scss";
 @import "./components/question.scss";
 @import "./components/answer.scss";
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,400;1,600&display=swap');
+
+
+.App {
+  font-family: 'Rubik', sans-serif;
+  max-width: 700px;
+  margin: 0 auto;
+
+  p {
+    margin-bottom: 0;
+  }
+}
 
 // mobile first
 

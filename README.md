@@ -51,10 +51,10 @@ App, Home, Error404, StatusBar, Question, Answer, Result
   - //next :
   
   - css:
-        -  of landing page
-        -  buttons not bootstrap
-
-
+        -  for li: p to span
+              -  include mq ?
+        - submit & next button get a margin top
+        
   - when multiple correct answers:
               -  if a wrong one is also clicked, the score shouldn't increase
               -  if not all the correct are clicked, the score shouldn't increase
@@ -64,7 +64,6 @@ App, Home, Error404, StatusBar, Question, Answer, Result
 TODO:
 
 - refactor ternary Buttons ?
-- pass counter into Status via props
 
 // Questions Leon :
 
