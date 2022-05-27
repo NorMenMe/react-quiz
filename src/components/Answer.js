@@ -55,7 +55,7 @@ let getAnswer = (e) => {
           input[counter].map((answer,index) => {
             return <li key={index} className="answer__item">
                       <input type="checkbox" className="answer__checkbox"/>
-                      <p className="answer__text">{answer.text}</p>
+                      <p className="answer__text"><span>{answer.text}</span></p>
                    </li>;
           })
         }

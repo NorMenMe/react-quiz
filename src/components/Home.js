@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 function Home() {
   return (
-    <section className="home__home">
+    <section className="home">
       <Header />
       <p className="home__text">
         This is a quiz about HTML, CSS and JavaScript, that can be used to
