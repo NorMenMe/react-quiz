@@ -44,32 +44,14 @@ App, Home, Error404, StatusBar, Question, Answer, Result
 
 ## pseudocode notes
 
-- issues:
+- //next :
 
-  depending on isSubmit , it toggles back to 0, back to start counter
-
-  - //next :
-  
-  - css:
-        -  for li: p to span
-              -  include mq ?
-        - submit & next button get a margin top
-        
-  - when multiple correct answers:
-              -  if a wrong one is also clicked, the score shouldn't increase
-              -  if not all the correct are clicked, the score shouldn't increase
-  - tree shaking
+  - read again the project
+  - styles
   - refactor all let auf const
-
-TODO:
-
-- refactor ternary Buttons ?
+  - refactor ternary Buttons ?
 
 // Questions Leon :
 
 - ? to Leon: line 27, for the else returning a "" for saying return nothing, better practice ?
--
 - what is the let/const convention @ Innovation team ?
-
-
-
