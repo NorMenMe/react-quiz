@@ -17,7 +17,7 @@ let getAnswer = (e) => {
             item.classList.add("answer__item--border-false");
           }
     })
-
+console.log(solutions[counter]);
     // check enabled checkbox
     let checkboxes = document.querySelectorAll(".answer__checkbox");
     checkboxes.forEach((checkbox,index) => {
