@@ -50,11 +50,9 @@ App, Home, Error404, StatusBar, Question, Answer, Result
 
   - if not all right answer are checked then don't increase the score
 
-        - check if all the indexes of the checked checkboxes are matching the numbers of the solution[counter]
-        - ? push all indexes in an array
-        - ? compare the array for strict equality`
-
-    ö
+    - check if all the indexes of the checked checkboxes are matching the numbers of the solution[counter]
+    - ? push all indexes in an array
+    - ? compare the array for strict equality`
 
   - read again the project
   - styles
