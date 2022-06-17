@@ -1,7 +1,8 @@
-import React, { useState, useContext } from "react";
+import React, {useContext } from "react";
 import QuizContext from "./CreateContext";
 
-function Status({score,counter}) {
+function Status({score}) {
+  const {counter} = useContext(QuizContext);
 
   return (
     <section className="status">

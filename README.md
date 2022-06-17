@@ -44,32 +44,25 @@ App, Home, Error404, StatusBar, Question, Answer, Result
 
 ## pseudocode notes
 
-- issues:
+- //next :
 
-  depending on isSubmit , it toggles back to 0, back to start counter
+- logic:
 
-  - //next :
-  
-  - css:
-        -  for li: p to span
-              -  include mq ?
-        - submit & next button get a margin top
-        
-  - when multiple correct answers:
-              -  if a wrong one is also clicked, the score shouldn't increase
-              -  if not all the correct are clicked, the score shouldn't increase
-  - tree shaking
+  - if not all right answer are checked then don't increase the score
+
+    - check if all the indexes of the checked checkboxes are matching the numbers of the solution[counter]
+    - ? push all indexes in an array
+    - ? compare the array for strict equality`
+
+  - read again the project
+  - styles
+
+    - error boxes get border-radius
+    - question need a margin-top
+
   - refactor all let auf const
-
-TODO:
-
-- refactor ternary Buttons ?
+  - refactor ternary Buttons ?
 
 // Questions Leon :
 
 - ? to Leon: line 27, for the else returning a "" for saying return nothing, better practice ?
--
-- what is the let/const convention @ Innovation team ?
-
-
-
