@@ -4,7 +4,7 @@ import clsx from "clsx";
 function Button(props) {
   let { onClick, children, type, className,disabled } = props;
 
-  const classes = clsx("ui-btn", className);
+  const classes = clsx("button", className);
 
   if (!type) {
     type = "submit";

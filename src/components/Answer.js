@@ -22,6 +22,8 @@ let getAnswer = (e) => {
     let checkboxes = document.querySelectorAll(".answer__checkbox");
     checkboxes.forEach((checkbox,index) => {
       if (checkbox.checked) {
+        console.log(checkbox.checked);
+        console.log(solutions[counter]);
         if (solutions[counter].includes(index)) {
           setScore(score + 1);
         }
@@ -55,7 +57,9 @@ let getAnswer = (e) => {
           input[counter].map((answer,index) => {
             return <li key={index} className="answer__item">
                       <input type="checkbox" className="answer__checkbox"/>
-                      <p className="answer__text"><span>{answer.text}</span></p>
+                      <p className="answer__text">
+                        <span>{answer.text}</span>
+                      </p>
                    </li>;
           })
         }
