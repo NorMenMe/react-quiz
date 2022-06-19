@@ -17,20 +17,17 @@ let getAnswer = (e) => {
             item.classList.add("answer__item--border-false");
           }
     })
-console.log(solutions[counter].length);
+
     // check enabled checkbox
     let checkboxes = document.querySelectorAll(".answer__checkbox");
     const rightAnswersArr = [];
     checkboxes.forEach((checkbox,index) => {
       if (checkbox.checked) {
-        console.log(checkbox.checked);
-        console.log(solutions[counter]);
         if (solutions[counter].includes(index)) {
           rightAnswersArr.push(1);
         }
       }
     })
-    
     if (solutions[counter].length === rightAnswersArr.length) {
       setScore(score + 1);
     }  

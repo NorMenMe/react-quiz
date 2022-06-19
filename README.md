@@ -45,20 +45,8 @@ App, Home, Error404, StatusBar, Question, Answer, Result
 ## pseudocode notes
 
 - //next :
-
-- logic:
-
-  - if not all right answer are checked then don't increase the score
-
-    - check if all the indexes of the checked checkboxes are matching the numbers of the solution[counter]
-    - ? push all indexes in an array
-    - ? compare the array for strict equality`
-
-  - read again the project
-  - styles
-
-    - error boxes get border-radius
-    - question need a margin-top
+  - styles:
+    - score & question on the right , as column
 
   - refactor all let auf const
   - refactor ternary Buttons ?
